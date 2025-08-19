@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa Turma | Melhor da Escola</title>
 
+<style>
+/* ---------- ESTILOS GERAIS ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #002244, #0055aa);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Seção Alunos */
+.estudante {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.estudante_titulo {
+    text-align: center;
+    color: #002244;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.estudantes_todos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.estudante-div {
+    background: #e6f0ff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.estudante-div:hover {
+    transform: scale(1.05);
+}
+.estudante-imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.estudante-nome {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #000;
+}
+.estudante-icone {
+    width: 25px;
+    margin: 5px;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.carousel img {
+    width: 100%;
+    display: none;
+}
+.carousel img.active {
+    display: block;
+}
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+/* Rodapé */
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+footer a {
+    color: #00ccff;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1>Turma ADS 1CDS</h1>
+    <p>A melhor turma da escola — Unidos sempre!</p>
+</header>
+
+<!-- Repetir sessões com 6 alunos -->
+<section class="estudante">
+    <h2 class="estudante_titulo">Destaques da Turma ADS 1CDS</h2>
+    <div class="estudantes_todos">
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno1.png" alt="Aluno 1">
+            <h3 class="estudante-nome">Aluno 1</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno2.png" alt="Aluno 2">
+            <h3 class="estudante-nome">Aluno 2</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno3.png" alt="Aluno 3">
+            <h3 class="estudante-nome">Aluno 3</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno4.png" alt="Aluno 4">
+            <h3 class="estudante-nome">Aluno 4</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno5.png" alt="Aluno 5">
+            <h3 class="estudante-nome">Aluno 5</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+        <div class="estudante-div">
+            <img class="estudante-imagem" src="aluno6.png" alt="Aluno 6">
+            <h3 class="estudante-nome">Aluno 6</h3>
+            <img class="estudante-icone" src="instagram.png" alt="Instagram">
+            <img class="estudante-icone" src="facebook.png" alt="Facebook">
+        </div>
+    </div>
+</section>
+
+<!-- Carrossel -->
+<div class="carousel">
+    <img src="turma1.jpg" class="active" alt="Foto da turma 1">
+    <img src="turma2.jpg" alt="Foto da turma 2">
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
+
+<footer>
+    <p>©2024 | Turma ADS 1CDS | Unidos e vencedores!</p>
+    <p>Contato: <a href="https://wa.me/5541999999999">Whatsapp da turma</a></p>
+</footer>
+
+<script>
+// Carrossel JS simples
+let slideIndex = 0;
+const slides = document.querySelectorAll(".carousel img");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+function showSlide(n) {
+    slides.forEach((img, i) => {
+        img.classList.remove("active");
+        if (i === n) img.classList.add("active");
+    });
+}
+
+prevBtn.addEventListener("click", () => {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+});
+
+// Troca automática a cada 5s
+setInterval(() => {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+}, 5000);
+</script>
+</body>
+</html>
