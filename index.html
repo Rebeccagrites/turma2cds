@@ -585,19 +585,6 @@ setInterval(() => {
 
 //carrossel 2 
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -606,15 +593,18 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "none"; // Esconde todas as imagens grandes
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", ""); // Remove a classe 'active' de todas as miniaturas
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  
+  // AQUI É O PONTO CRÍTICO: Exibe a imagem grande correta e adiciona a classe 'active' à miniatura correspondente
+  slides[slideIndex-1].style.display = "block"; // Mostra a imagem grande selecionada
+  dots[slideIndex-1].className += " active"; // Adiciona a classe 'active' à miniatura correspondente
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
 </script>
 </body>
 </html>
