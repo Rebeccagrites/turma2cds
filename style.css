@@ -92,3 +92,37 @@
     color: #ffffff;
     text-decoration: none;
     }
+header {
+    background: linear-gradient(90deg, #002244, #0055aa);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Container flex para alinhar logo e texto */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza tudo horizontalmente */
+    gap: 15px; /* espaço entre logo e texto */
+}
+
+/* Logo no canto esquerdo */
+.logo {
+    width: 60px; /* ajusta o tamanho da logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Texto ao lado da logo */
+.header-text {
+    text-align: left;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
