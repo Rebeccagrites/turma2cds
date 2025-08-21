@@ -102,7 +102,7 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* centraliza tudo horizontalmente */
+   justify-content: space-between;
     gap: 15px; /* espaço entre logo e texto */
 }
 
