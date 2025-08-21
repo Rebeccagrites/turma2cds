@@ -98,32 +98,36 @@ header {
     padding: 20px;
 }
 
-/* Container flex para alinhar logo e texto */
+header {
+  background: linear-gradient(90deg, #002244, #0055aa);
+  color: #fff;
+  padding: 20px;
+}
+
+/* Faz a logo ficar colada à esquerda e o texto ao lado */
 .header-container {
-    display: flex;
-    align-items: center;
-   justify-content: space-between;
-    gap: 15px; /* espaço entre logo e texto */
+  display: flex;
+  align-items: center;     /* centraliza na vertical */
+  justify-content: flex-start; /* empurra tudo pro canto esquerdo */
+  gap: 15px;               /* espaço entre logo e texto */
 }
 
-/* Logo no canto esquerdo */
+/* Ajusta o tamanho da logo */
 .logo {
-    width: 60px; /* ajusta o tamanho da logo */
-    height: auto;
-    margin-right: 15px;
+  width: 70px;
+  height: auto;
 }
 
-/* Texto ao lado da logo */
+/* Texto da turma */
 .header-text {
-    text-align: left;
+  text-align: left;
 }
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  margin: 0;
+  font-size: 2.5rem;
 }
 header p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 5px 0 0;
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
- 
