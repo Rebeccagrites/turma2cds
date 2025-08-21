@@ -107,7 +107,7 @@ header {
 /* Faz a logo ficar colada à esquerda e o texto ao lado */
 .header-container {
   display: flex;
-  align-items: center;     /* centraliza na vertical */
+  align-items:flex-start;     /* centraliza na vertical */
   justify-content: flex-start; /* empurra tudo pro canto esquerdo */
   gap: 15px;               /* espaço entre logo e texto */
 }
