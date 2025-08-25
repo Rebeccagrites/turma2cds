@@ -116,6 +116,37 @@ header {
 .logo {
   width: 70px;
   height: auto;
+
+<style>
+  .flex-container {
+
+    display: flex;
+    
+    justify-content: flex-start; 
+    align-items: flex-start;    
+
+    background-color: #bbdefb;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+  }
+
+  .flex-container > div{
+    background: #ffecb3;
+    border: 3px solid #ffcc80;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+
+
+</style>
+
+<div class="flex-container">
+   
+    <div class="item1">item 1</div>
+</div>
 }
 
 /* Texto da turma */
